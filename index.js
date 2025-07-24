@@ -24,7 +24,7 @@ const agent = new https.Agent({
 });
 
 app.post('/linktopay', (req, res) => {
-    fetch('https://worldtimeapi.org/api/ip', { agent })
+    fetch('https://pg-micros.paymentez.com/v1/unixtime/', { agent })
         .then(response => response.json())
         .then(data => {
             const timestamp = data.unixtime;
@@ -59,7 +59,7 @@ app.post('/linktopay', (req, res) => {
 });
 
 app.post('/order', (req, res) => {
-    fetch('https://worldtimeapi.org/api/ip', { agent })
+    fetch('https://pg-micros.paymentez.com/v1/unixtime/', { agent })
         .then(response => response.json())
         .then(data => {
             const timestamp = data.unixtime;
@@ -94,7 +94,7 @@ app.post('/order', (req, res) => {
 });
 
 app.post('/checkout', (req, res) => {
-    fetch('https://worldtimeapi.org/api/ip', { agent })
+    fetch('https://pg-micros.paymentez.com/v1/unixtime/', { agent })
         .then(response => response.json())
         .then(data => {
             const timestamp = data.unixtime;
